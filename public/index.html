@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>[Citation Needed]</title>
+	<style type="text/css">
+		body {
+			background-color:#000;
+			height:800px;
+			padding-top:0px;
+			padding-bottom:0px;
+			font-family:Helvetica;
+		}
+		.centerFrame {
+			width:auto;
+			height:800px;
+			margin-left:auto;
+			margin-right:auto;
+			text-align:center;
+			padding-top:0px;
+			padding-bottom:0px;
+		}
+		.mainBracketLeft {
+			color:#fff;
+			font-size:450px;
+			display:inline;
+			position:relative;
+			top:0px;
+			margin-top:0px;
+			margin-bottom:0px;
+		
+		}
+		.mainBracketRight {
+			color:#fff;
+			font-size:450px;
+			position:relative;
+			top:225px;
+			display:inline;
+			margin-top:0px;
+			margin-bottom:0px;
+		}
+		.content {
+			font-size:100px;
+			color:#fff;
+			display:inline;
+			margin-top:0px;
+			margin-bottom:0px;
+			padding-top:0px;
+			padding-bottom:0px;
+		}
+	</style>
+	<script type="text/javascript">
+	
+		function loadContent(content,frame)
+		{
+			expandingLoad(content,frame,0,'','');
+		}
+		
+		function expandingLoad(content,frame,i,contentToShowLeft,contentToShowRight) {
+			var contentLength = content.length;
+			var isLengthEven;
+			if (contentLength%2 == 0) {
+				isLengthEven = true;
+			}
+			else {
+				isLengthEven = false;
+			}
+			var contentToShow = "";
+			if (i < contentLength/2)
+			{
+				contentToShowRight =  content.charAt((contentLength - 1 ) - i) + contentToShowRight ;
+				contentToShowLeft = contentToShowLeft + content.charAt(i);
+				contentToShow = contentToShowLeft + contentToShowRight;
+				document.getElementById(frame).innerHTML = contentToShow;
+				i = i + 1;
+				setTimeout(function() {
+				    sleep(300);
+					expandingLoad(content,frame,i,contentToShowLeft,contentToShowRight);
+				}, 1);
+				
+			}
+		}
+	
+		function sleep(ms)
+		{
+			var dt = new Date();
+			dt.setTime(dt.getTime() + ms);
+			while (new Date().getTime() < dt.getTime());
+		}
+	</script>
+  </head>
+  <body>
+		<div class="centerFrame">
+			<div class="mainBracketLeft" >[</div>
+			<div class="content" id="mainContentDiv"></div>
+			<div class="mainBracketRight">]</div>
+		</div>
+		<script type="text/javascript">
+		
+			window.onload=loadContent('Citation  Needed','mainContentDiv');
+		</script>
+  </body>
+</html>
