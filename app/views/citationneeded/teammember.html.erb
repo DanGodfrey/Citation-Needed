@@ -1,0 +1,43 @@
+<img class="profile-pic" src="<%= @member.profile_pic_url %>"/>
+
+<div class="name-stats">
+    <h1><%= @member.name %></h1>
+
+    <table class="stats-table">
+        <tr>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+        </tr>
+        <% @member.stats.each do |stat| %>
+        <tr>
+            <td><%= stat.name %></td>
+            <% 1.upto(stat.number) { |i| %> <td class="filled"></td> <%}%>
+        </tr>
+        <%end%>
+    </table>
+</div>
+
+<div class="asl-list">
+    <ul>
+        <li><strong>Twitter: </strong><%= @member.twitter%></li>
+        <li><strong>Github: </strong><%= @member.github%></li>
+        <li><strong>Weapon of Choice: </strong><%= @member.weapon%></li>
+        <li><strong>Specialty: </strong><%= @member.specialty%></li>
+        <li><strong>Catch Phrase:</strong> <%= @member.catch_phrase%></li>
+    </ul>
+</div>
+
+<div class="bio-container">
+    <p>
+        <strong>Bio: </strong><%= @member.bio %>
+    </p>
+</div>

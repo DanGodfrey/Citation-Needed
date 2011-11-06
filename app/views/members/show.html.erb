@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @member.name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @member.bio %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @member.twitter %>
+</p>
+
+<p>
+  <b>Github:</b>
+  <%= @member.github %>
+</p>
+
+<p>
+  <b>Weapon:</b>
+  <%= @member.weapon %>
+</p>
+
+<p>
+  <b>Specialty:</b>
+  <%= @member.specialty %>
+</p>
+
+<p>
+  <b>Catch phrase:</b>
+  <%= @member.catch_phrase %>
+</p>
+
+<p>
+  <b>Profile pic url:</b>
+  <%= @member.profile_pic_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

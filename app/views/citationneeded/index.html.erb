@@ -1,0 +1,41 @@
+<img id="left-slider-arrow" class="carousel-arrow" src="/images/carousel-arrow-left.jpeg"/>
+<div class="slider">
+<div id="slider1">
+    <div class="slide">
+        <%= render :template => 'citationneeded/title' %>
+    </div>
+    <div class="slide">
+        <%= render :template => 'citationneeded/about' %>
+    </div>
+    <% @members.each do |member| %>
+        <% @member = member %>
+        <div class="slide">
+            <%= render :template => 'citationneeded/teammember' %>
+        </div>
+    <% end %>
+    <div class="slide">
+            <%= render :template => 'citationneeded/sponsors' %>
+    </div>
+</div>
+</div>
+<img id="right-slider-arrow" class="carousel-arrow" src="/images/carousel-arrow-right.jpeg"/>
+
+<script type="text/javascript">
+    $(function(){
+        slider = $('#slider1').bxSlider({
+            mode: 'horizontal',
+            controls: false
+         });
+         
+        $('#right-slider-arrow').click(function(){
+             slider.goToNextSlide();
+             return false;
+        });
+        
+        $('#left-slider-arrow').click(function(){
+             slider.goToPreviousSlide();
+             return false;
+        });
+         
+     });
+</script>

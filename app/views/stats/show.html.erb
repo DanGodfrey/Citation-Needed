@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @stat.name %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @stat.number %>
+</p>
+
+<p>
+  <b>Member:</b>
+  <%= @stat.member_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>

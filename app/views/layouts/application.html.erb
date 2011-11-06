@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Citationneeded</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+        <head>
+        <title>Citation Needed</title>
+        <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
+        <%= stylesheet_link_tag :all %>
+        <%= javascript_include_tag :all %>
+        <%= csrf_meta_tag %>
+    </head>
+    <body>
+        <div class="container">
+            <div class="main-bracket-left">[</div>    
+            <div class="inside-brackets">
+                <div class="main-content">
+                    <%= yield %>
+                </div>
+            </div>
+            <div class="main-bracket-right">]</div>    
+        </div>
+    </body>
 </html>

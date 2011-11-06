@@ -1,0 +1,117 @@
+html {
+    background-color: #000000;
+}
+
+body {
+    background-color:#000000;
+    color:#FFF;
+}
+
+
+.container {
+    margin-top:80px;
+}
+
+.main-bracket-left, .main-bracket-right {
+    height: 310px;
+    width: 50px;
+    float:left;
+    text-align:center;
+    font-size:39em;
+    padding-top:190px;
+}
+
+.main-bracket-left {
+    width:135px;
+}
+.inside-brackets {
+    height:500px;
+    width:755px;
+    float:left;
+}
+
+.main-content {
+
+}
+
+.largeTitle {
+    text-align:center;
+    margin-top:120px;
+    color:#FFF;
+    font-size:6em;
+}
+
+.slider {
+    float:left;
+    width:655px;
+}
+
+.slide {
+    height:500px;
+    margin-top:100px;
+}
+
+.carousel-arrow{
+    float:left;
+    margin-top:220px;
+    cursor:pointer;
+    z-index:100;
+}
+
+.name-stats {
+    float:left;
+}
+
+.profile-pic {
+    width:200px;
+    padding-right:10px;
+    float:left;
+}
+
+.bio-container {
+    float:left;
+    width:414px;
+}
+
+.stats-table {
+    width:445px;
+    height:150px;
+    border-collapse: collapse;
+}
+
+.asl-list {
+   float:left;
+   padding-right:30px;
+}
+
+ul {
+    list-style:none;
+}
+
+h1 {
+    margin-bottom:0;
+}
+
+table td, table tr {
+    height:25px;
+    padding-top:0;
+    margin-top:0;
+    padding-bottom:0;
+    margin-bottom:0;
+    border-top:none;
+    border-left:none;
+}
+
+table tr + tr td {
+    border-top:none;
+    border-left:none;
+}
+
+table th + th, table td + td {
+    border-top:none;
+    border-left:none;
+}
+
+.filled {
+    background-color:#FFF;
+}
